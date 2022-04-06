@@ -3,11 +3,12 @@ import "./App.css";
 import BubbleChart from "./BubbleChart";
 import LineChart from "./LineChart";
 import MyChart from "./MyChart";
-const SERVER_URI = process.env.SERVER_URI
+const SERVER_URI = process.env.SERVER_URI;
+console.log(SERVER_URI);
 function App() {
   const [chartData, setChartData] = useState({});
   useEffect(() => {
-    fetch(`${SERVER_URI}/api/fetchData`)
+    fetch(`https://chart-qualyval01.netlify.app/api/fetchData`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data.lineChartData[0]);
