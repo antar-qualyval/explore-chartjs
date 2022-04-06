@@ -3,11 +3,11 @@ import "./App.css";
 import BubbleChart from "./BubbleChart";
 import LineChart from "./LineChart";
 import MyChart from "./MyChart";
-
+const SERVER_URI = process.env.SERVER_URI
 function App() {
   const [chartData, setChartData] = useState({});
   useEffect(() => {
-    fetch("http://localhost:8888/api/fetchData")
+    fetch(`${SERVER_URI}/api/fetchData`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data.lineChartData[0]);
