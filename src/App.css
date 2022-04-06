@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -26,6 +27,15 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.chartContainer {
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.chartContainer:nth-child(1) {
+  width: 500px;
 }
 
 @keyframes App-logo-spin {
